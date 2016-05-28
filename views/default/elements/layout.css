@@ -20,9 +20,9 @@
 	min-height: 65px;
 }
 .elgg-page-default .elgg-page-navbar > .elgg-inner {
-	max-width: 990px;
+	position: fixed;
 	margin: 0 auto;
-	height: auto;
+	z-index: 9;
 }
 .elgg-page-default .elgg-page-body > .elgg-inner {
 	max-width: 990px;
@@ -71,12 +71,13 @@
 }
 /***** PAGE NAVBAR ******/
 .elgg-page-navbar {
-	padding: 0 20px;
+	padding: 0;
 	position: relative;
 	background: #4787B8;
 }
 .elgg-page-navbar > .elgg-inner {
 	position: relative;
+	height: 100%;
 }
 
 /***** PAGE BODY LAYOUT ******/

@@ -168,6 +168,10 @@
 	padding-top: 7px;
 }
 
+.elgg-nav-collapse {
+	height: 100%;
+}
+
 /* ***************************************
 	SITE MENU
 *************************************** */
@@ -177,10 +181,12 @@
 	left: 0;
 	top: 0;
 	position: relative;
-	z-index: 50;
+	z-index: 9999;
+	background: #33b1d9;
+	height: 100%;
 }
 .elgg-menu-site > li {
-	float: left;
+
 }
 .elgg-menu-site > li > a {
 	color: #FFF;
@@ -191,7 +197,7 @@
 }
 .elgg-menu-site > .elgg-state-selected > a,
 .elgg-menu-site > li:hover > a {
-	background-color: #60B8F7;
+	background-color: #fac455;
 	color: #FFF;
 }
 .elgg-menu-site > li > ul {
