@@ -1,0 +1,4 @@
+
+.elgg-menu-item-account > a:after {
+	content: none;
+}

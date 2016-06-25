@@ -8,12 +8,27 @@ function theme_sbw_init() {
 	elgg_register_plugin_hook_handler('register', 'menu:topbar', 'theme_sbw_topbar_menu');
 
 	elgg_require_js('theme_sbw');
+
+	elgg_extend_view('elgg.css', 'theme_sbw.css');
 }
 
 /**
  *
  */
 function theme_sbw_topbar_menu($hook, $type, $menu, $params) {
+	foreach ($menu as $item) {
+		switch($item->getName()) {
+			case 'friends':
+			case 'messages':
+				$item->setSection('alt');
+				break;
+			case 'account':
+				$item->setPriority('1000');
+				$item->setText(elgg_view_icon('cog'));
+				break;
+		}
+	}
+
 	$menu[] = ElggMenuItem::factory(array(
 		'name' => 'site_menu_toggle',
 		'text' => elgg_view_icon('bars'),

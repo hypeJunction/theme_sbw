@@ -146,6 +146,10 @@
 	text-decoration: none;
 }
 
+.elgg-menu-topbar > li > a:hover > .elgg-icon {
+	color: #FAC455;
+}
+
 .elgg-menu-topbar-alt {
 	float: right;
 }
@@ -153,6 +157,8 @@
 .elgg-menu-topbar .elgg-icon {
 	vertical-align: middle;
 	margin-top: -1px;
+	font-size: 20px;
+	color: #fff;
 }
 
 .elgg-menu-topbar > li > a.elgg-topbar-logo {
