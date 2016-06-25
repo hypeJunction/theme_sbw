@@ -184,6 +184,8 @@
 	z-index: 9999;
 	background: #33b1d9;
 	height: 100%;
+	width: 0;
+	overflow: hidden;
 }
 .elgg-menu-site > li {
 
