@@ -146,7 +146,7 @@
 	text-decoration: none;
 }
 
-.elgg-menu-topbar > li > a:hover > .elgg-icon {
+.elgg-menu-topbar > li > a:hover > span {
 	color: #FAC455;
 }
 
@@ -169,9 +169,21 @@
 }
 
 .elgg-menu-topbar > li > a.elgg-topbar-avatar {
-	width: 18px;
-	height: 18px;
-	padding-top: 7px;
+	padding-top: 0;
+}
+
+.elgg-menu-topbar > li > a.elgg-topbar-avatar span {
+	position: relative;
+	top: 5px;
+	font-weight: bold;
+}
+
+.elgg-menu-topbar > li > a.elgg-topbar-avatar img {
+	margin-right: 5px;
+	display: inline;
+	vertical-align: top;
+	border: 2px solid white;
+	border-radius: 20px;
 }
 
 .elgg-nav-collapse {

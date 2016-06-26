@@ -19,6 +19,8 @@ function theme_sbw_init() {
  *
  */
 function theme_sbw_topbar_menu($hook, $type, $menu, $params) {
+	$user = elgg_get_logged_in_user_entity();
+
 	foreach ($menu as $item) {
 		switch($item->getName()) {
 			case 'friends':
@@ -29,6 +31,12 @@ function theme_sbw_topbar_menu($hook, $type, $menu, $params) {
 				$item->setPriority('1000');
 				$item->setText(elgg_view_icon('cog'));
 				break;
+			case 'profile':
+				$icon = elgg_view('output/img', array(
+					'src' => $user->getIconURL('tiny'),
+				));
+				$item->setText("{$icon}<span>{$user->name}</span>");
+				break;
 		}
 	}
 
@@ -36,6 +44,7 @@ function theme_sbw_topbar_menu($hook, $type, $menu, $params) {
 		'name' => 'site_menu_toggle',
 		'text' => elgg_view_icon('bars'),
 		'href' => '',
+		'priority' => 1,
 	));
 
 	return $menu;
