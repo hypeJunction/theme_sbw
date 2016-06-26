@@ -4,6 +4,7 @@
 	<id>theme_sbw</id>
 	<author>Juho Jaakkola juho@elgg.org</author>
 	<version>0.1.0</version>
+	<category>theme</category>
 	<description>Custom theme for Social business world.</description>
 	<website>https://socialbusinessworld.org/</website>
 	<license>GNU General Public License version 2</license>
