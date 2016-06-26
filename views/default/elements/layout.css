@@ -38,11 +38,14 @@
 /***** TOPBAR ******/
 .elgg-page-topbar {
 	background: #33b1d9;
-	padding: 0 20px;
+	padding: 0;
 	position: relative;
-	min-height: 42px;
 	z-index: 9000;
 	text-align: center;
+}
+
+.elgg-page-topbar .elgg-inner {
+	padding-top: 5px;
 }
 
 /***** PAGE MESSAGES ******/

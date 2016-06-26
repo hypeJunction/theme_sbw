@@ -11,10 +11,10 @@ Search plugin
 .elgg-search-header {
 	display: block;
 	position: relative;
-	margin-bottom: 15px;
+	float: right;
 }
 .elgg-search input[type=text] {
-	width: 100%;
+	width: 100px;
 }
 .elgg-search input[type=submit] {
 	display: none;

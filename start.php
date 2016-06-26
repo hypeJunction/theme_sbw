@@ -10,6 +10,9 @@ function theme_sbw_init() {
 	elgg_require_js('theme_sbw');
 
 	elgg_extend_view('elgg.css', 'theme_sbw.css');
+
+	elgg_unextend_view('page/elements/sidebar', 'search/header');
+	elgg_extend_view('page/elements/topbar', 'search/header');
 }
 
 /**
