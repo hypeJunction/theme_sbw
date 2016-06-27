@@ -18,7 +18,7 @@
 .elgg-button:focus {
 	text-decoration: none;
 }
-.elgg-button-submit {	
+.elgg-button-submit {
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	background: #4787B8;
 }
@@ -39,9 +39,8 @@
 	background: #E38F07;
 }
 .elgg-button-action {
-	border: 1px solid rgba(0, 0, 0, 0.2);
-	background: #F0F0F0;
-	color: #333;
+	background: #fac455;
+	color: #fff;
 }
 .elgg-button-action:hover,
 .elgg-button-action:focus {
