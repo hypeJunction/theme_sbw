@@ -11,12 +11,14 @@ define(function(require) {
 
 		if (menu.width() == 0) {
 			var newWidth = "100%";
+			var overflow = 'scroll';
 		} else {
 			var newWidth = "0";
+			var overflow = 'hidden';
 		}
 
-		$('.elgg-menu-site').animate({
-			width: newWidth
+		$('.elgg-menu-site').css('overflow-y', overflow).animate({
+			width: newWidth,
 		}, "fast");
 	});
 });

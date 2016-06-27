@@ -21,6 +21,7 @@
 }
 .elgg-page-default .elgg-page-navbar > .elgg-inner {
 	position: fixed;
+	top: 45px;
 	margin: 0 auto;
 	z-index: 9;
 }

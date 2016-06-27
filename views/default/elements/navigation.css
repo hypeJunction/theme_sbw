@@ -203,7 +203,10 @@
 	background: #33b1d9;
 	height: 100%;
 	width: 0;
-	overflow: hidden;
+
+	overflow-x: hidden;
+	overflow-y: hidden;
+
 }
 .elgg-menu-site > li {
 
