@@ -37,6 +37,10 @@ function theme_sbw_topbar_menu($hook, $type, $menu, $params) {
 				));
 				$item->setText("{$icon}<span>{$user->name}</span>");
 				break;
+			case 'site_notifications':
+				$item->setText(elgg_view_icon('flag'));
+				$item->setParentName('');
+				break;
 		}
 	}
 
