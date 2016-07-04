@@ -19,8 +19,8 @@
 	text-decoration: none;
 }
 .elgg-button-submit {
-	border: 1px solid rgba(0, 0, 0, 0.2);
-	background: #4787B8;
+	border: none;
+	background: #fac455;
 }
 .elgg-button-submit:hover,
 .elgg-button-submit:focus {
