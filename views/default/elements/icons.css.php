@@ -61,6 +61,9 @@ h6 > .elgg-icon {
 	position: relative;
 	display: inline-block;
 }
+.elgg-avatar img {
+	border-radius: 100px !important;
+}
 .elgg-avatar > a > img {
 	display: block;
 }
