@@ -58,5 +58,12 @@ function theme_sbw_topbar_menu($hook, $type, $menu, $params) {
 		'priority' => 1,
 	));
 
+	$menu[] = ElggMenuItem::factory(array(
+		'name' => 'dashboard',
+		'text' => elgg_view_icon('home'),
+		'href' => '/dashboard',
+		'section' => 'alt',
+	));
+
 	return $menu;
 }
