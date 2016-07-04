@@ -12,7 +12,6 @@ function theme_sbw_init() {
 	elgg_extend_view('elgg.css', 'theme_sbw.css');
 
 	elgg_unextend_view('page/elements/sidebar', 'search/header');
-	elgg_extend_view('page/elements/topbar', 'search/header');
 }
 
 /**
@@ -43,6 +42,14 @@ function theme_sbw_topbar_menu($hook, $type, $menu, $params) {
 				break;
 		}
 	}
+
+	$menu[] = ElggMenuItem::factory(array(
+		'name' => 'search_icon',
+		'text' => elgg_view_icon('search') . elgg_view('search/header'),
+		'href' => false,
+		'section' => 'alt',
+		'priority' => 1	,
+	));
 
 	$menu[] = ElggMenuItem::factory(array(
 		'name' => 'site_menu_toggle',

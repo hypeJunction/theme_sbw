@@ -13,6 +13,32 @@ Search plugin
 	position: relative;
 	float: right;
 }
+.elgg-search-header .search-input,
+.elgg-search-header .search-input:focus {
+	background: #33b1d9;
+	color: white;
+	border: 0;
+	border-radius: 0;
+	border-bottom: 1px solid white;
+}
+.elgg-search-header ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: white;
+}
+.elgg-search-header :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: white;
+   opacity: 1;
+}
+.elgg-search-header ::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: white;
+   opacity: 1;
+}
+.elgg-search-header :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: white;
+}
+.elgg-menu-item-search-icon .elgg-icon-search {
+	margin: 8px 3px 0 0;
+}
+
 .elgg-search input[type=text] {
 	width: 100px;
 }
