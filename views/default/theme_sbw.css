@@ -5,3 +5,7 @@ body {
 .elgg-menu-item-account > a:after {
 	content: none;
 }
+
+#feedbackWrapper {
+	top: 70px;
+}
