@@ -49,7 +49,7 @@ if (elgg_is_admin_logged_in() && elgg_get_logged_in_user_guid() != elgg_get_page
 	}
 	$admin_links .= '</ul>';
 	$admin_links .= '</li>';
-	$admin_links .= '</ul>';	
+	$admin_links .= '</ul>';
 }
 
 // content links
@@ -58,13 +58,27 @@ $content_menu = elgg_view_menu('owner_block', array(
 	'class' => 'profile-content-menu',
 ));
 
+$details = elgg_view('profile/details');
+
+$cover_url = $user->getIconURL(array(
+	'type' => 'cover',
+	'size' => 'master',
+));
+
 echo <<<HTML
 
 <div id="profile-owner-block">
-	$icon
-	$profile_actions
-	$content_menu
-	$admin_links
+	<div class="elgg-col elgg-col-1of1 profile-header" style="background: url($cover_url) no-repeat;">
+		$icon
+		$profile_actions
+	</div>
+	<div class="elgg-col elgg-col-2of3">
+		$details
+	</div>
+	<div class="elgg-col elgg-col-1of3">
+		$content_menu
+		$admin_links
+	</div>
 </div>
 
 HTML;
