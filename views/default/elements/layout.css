@@ -128,16 +128,14 @@
 .elgg-layout-one-sidebar .elgg-main {
 	float: left;
 	width: 72.525252%;
+
+	background: white;
+	border: 1px solid #dcdcdc;
+	padding: 10px;
 }
 .elgg-layout-two-sidebar .elgg-main {
 	float: left;
 	width: 50.101010%;
-}
-
-.elgg-layout .elgg-main {
-	background: white;
-	border: 1px solid #dcdcdc;
-	padding: 10px;
 }
 
 /***** PAGE FOOTER ******/
