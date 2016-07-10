@@ -60,6 +60,12 @@ $content_menu = elgg_view_menu('owner_block', array(
 
 $details = elgg_view('profile/details');
 
+$river = elgg_list_river(array(
+	'subject_guid' => $user->guid,
+	'pagination' => false,
+	'limit' => 8,
+));
+
 $cover_url = $user->getIconURL(array(
 	'type' => 'cover',
 	'size' => 'master',
@@ -74,6 +80,7 @@ echo <<<HTML
 	</div>
 	<div class="elgg-col elgg-col-2of3">
 		$details
+		$river
 	</div>
 	<div class="elgg-col elgg-col-1of3">
 		$content_menu

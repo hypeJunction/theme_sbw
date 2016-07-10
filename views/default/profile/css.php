@@ -19,8 +19,10 @@
 	box-shadow; 0 2px 4px 0 rgba(0,0,0,.05);
 	padding: 15px;
 	margin-top: 20px;
+	margin-bottom: 20px;
 }
-#profile-details {
+#profile-details,
+#profile-owner-block .elgg-list-river {
 	margin-right: 20px;
 }
 
