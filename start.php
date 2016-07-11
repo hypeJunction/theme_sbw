@@ -58,12 +58,12 @@ function theme_sbw_cover_page_handler($page) {
  */
 function theme_sbw_cover_sizes($hook, $type, $sizes, $sizes) {
 	return array(
-		'topbar' => array('w' => 320, 'h' => 95, 'square' => FALSE, 'upscale' => FALSE),
-		'tiny' => array('w' => 900, 'h' => 200, 'square' => FALSE, 'upscale' => FALSE),
-		'small' => array('w' => 320, 'h' => 180, 'square' => FALSE, 'upscale' => FALSE),
-		'medium' => array('w' => 400, 'h' => 200, 'square' => FALSE, 'upscale' => FALSE),
-		'large' => array('w' => 1000, 'h' => 400, 'square' => FALSE, 'upscale' => FALSE),
-		'master' => array('w' => 1000, 'h' => 990, 'square' => FALSE, 'upscale' => FALSE),
+		'topbar' => array('w' => 320, 'h' => 95, 'square' => FALSE, 'upscale' => TRUE),
+		'tiny' => array('w' => 900, 'h' => 200, 'square' => FALSE, 'upscale' => TRUE),
+		'small' => array('w' => 320, 'h' => 180, 'square' => FALSE, 'upscale' => TRUE),
+		'medium' => array('w' => 400, 'h' => 200, 'square' => FALSE, 'upscale' => TRUE),
+		'large' => array('w' => 1000, 'h' => 400, 'square' => FALSE, 'upscale' => TRUE),
+		'master' => array('w' => 1000, 'h' => 990, 'square' => FALSE, 'upscale' => TRUE),
 	);
 }
 
