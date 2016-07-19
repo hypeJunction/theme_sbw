@@ -76,6 +76,11 @@ $badges = elgg_view('badges/icon', array(
 	'entity' => $user,
 ));
 
+$last_login = elgg_view('lastlogin/profile_extend', array(
+	'size' => 'large',
+	'entity' => $user,
+));
+
 echo <<<HTML
 
 <div id="profile-owner-block">
@@ -91,6 +96,7 @@ echo <<<HTML
 		<div class="elgg-inner">
 			$content_menu
 			$admin_links
+			$last_login
 			$badges
 		</div>
 	</div>
