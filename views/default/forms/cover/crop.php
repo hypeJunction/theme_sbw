@@ -13,8 +13,9 @@ $entity = elgg_extract('entity', $vars);
 
 $master_img = elgg_view('output/img', array(
 	'src' => $entity->getIconUrl(array(
-		'size' => 'master',
+		'size' => 'original',
 		'type' => 'cover',
+		'style' => 'width: 100%',
 	)),
 	'alt' => elgg_echo('cover'),
 	'class' => 'mrl',

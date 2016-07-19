@@ -64,6 +64,7 @@ function theme_sbw_cover_sizes($hook, $type, $sizes, $sizes) {
 		'medium' => array('w' => 400, 'h' => 200, 'square' => FALSE, 'upscale' => TRUE),
 		'large' => array('w' => 1000, 'h' => 400, 'square' => FALSE, 'upscale' => TRUE),
 		'master' => array('w' => 1000, 'h' => 990, 'square' => FALSE, 'upscale' => TRUE),
+		'original' => array(),
 	);
 }
 
