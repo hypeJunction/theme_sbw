@@ -19,7 +19,9 @@ function theme_sbw_init() {
 	elgg_unextend_view('icon/user/default', 'badges/icon');
 	elgg_unextend_view('icon/user/default', 'lastlogin/profile_extend');
 
-	elgg_extend_view('page/elements/topbar', 'language_selector/default');
+	if (!elgg_is_logged_in()) {
+		elgg_extend_view('page/elements/topbar', 'language_selector/default');
+	}
 
 	elgg_register_page_handler('cover', 'theme_sbw_cover_page_handler');
 	elgg_register_action("cover/upload", __DIR__ . "/actions/cover/upload.php");
