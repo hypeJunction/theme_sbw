@@ -127,7 +127,7 @@ html {
 	}
 	.elgg-main {
         padding: 12px 20px 10px;
-		
+
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
@@ -159,6 +159,9 @@ html {
 	.elgg-menu-footer {
 		float: none;
 		text-align: center;
+	}
+	.elgg-menu-topbar-alt {
+		margin-bottom: 10px;
 	}
 	.elgg-menu-page,
 	.elgg-sidebar .elgg-menu-owner-block,
