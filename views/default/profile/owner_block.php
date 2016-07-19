@@ -71,6 +71,11 @@ $cover_url = $user->getIconURL(array(
 	'size' => 'master',
 ));
 
+$badges = elgg_view('badges/icon', array(
+	'size' => 'large',
+	'entity' => $user,
+));
+
 echo <<<HTML
 
 <div id="profile-owner-block">
@@ -83,8 +88,11 @@ echo <<<HTML
 		$river
 	</div>
 	<div class="elgg-col elgg-col-1of3">
-		$content_menu
-		$admin_links
+		<div class="elgg-inner">
+			$content_menu
+			$admin_links
+			$badges
+		</div>
 	</div>
 </div>
 

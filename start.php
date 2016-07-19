@@ -13,6 +13,11 @@ function theme_sbw_init() {
 
 	elgg_unextend_view('page/elements/sidebar', 'search/header');
 
+	// Profile page avatar is not in a column like in default Elgg, so there is no
+	// space available for the badges. Instead we add them after the content menu
+	// in profile/owner_block.php
+	elgg_unextend_view('icon/user/default', 'badges/icon');
+
 	elgg_extend_view('page/elements/topbar', 'language_selector/default');
 
 	elgg_register_page_handler('cover', 'theme_sbw_cover_page_handler');
