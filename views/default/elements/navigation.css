@@ -190,6 +190,12 @@
 	height: 100%;
 }
 
+@media (max-width: 820px) {
+	.elgg-menu-topbar > li > a.elgg-topbar-avatar span {
+		display: none;
+	}
+}
+
 /* ***************************************
 	SITE MENU
 *************************************** */
