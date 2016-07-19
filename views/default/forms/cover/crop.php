@@ -15,10 +15,10 @@ $master_img = elgg_view('output/img', array(
 	'src' => $entity->getIconUrl(array(
 		'size' => 'original',
 		'type' => 'cover',
-		'style' => 'width: 100%',
 	)),
 	'alt' => elgg_echo('cover'),
 	'class' => 'mrl',
+	'style' => 'width: 100%',
 	'id' => 'user-cover-cropper',
 ));
 
