@@ -6,6 +6,7 @@ function theme_sbw_init() {
 	elgg_unregister_plugin_hook_handler('prepare', 'menu:site', '_elgg_site_menu_setup');
 
 	elgg_register_plugin_hook_handler('register', 'menu:topbar', 'theme_sbw_topbar_menu');
+	elgg_register_plugin_hook_handler('register', 'menu:site', 'theme_sbw_site_menu');
 
 	elgg_require_js('theme_sbw');
 
@@ -19,8 +20,9 @@ function theme_sbw_init() {
 	elgg_unextend_view('icon/user/default', 'badges/icon');
 	elgg_unextend_view('icon/user/default', 'lastlogin/profile_extend');
 
+	elgg_unextend_view("page/elements/header", "language_selector/default");
 	if (!elgg_is_logged_in()) {
-		elgg_extend_view('page/elements/topbar', 'language_selector/default');
+		//elgg_extend_view('page/elements/topbar', 'language_selector/default');
 	}
 
 	elgg_register_page_handler('cover', 'theme_sbw_cover_page_handler');
@@ -130,33 +132,62 @@ function theme_sbw_topbar_menu($hook, $type, $menu, $params) {
 	$user = elgg_get_logged_in_user_entity();
 
 	foreach ($menu as $item) {
-		switch($item->getName()) {
+		switch ($item->getName()) {
 			case 'friends' :
 			case 'messages' :
-				$item -> setSection('alt');
+				$item->setSection('alt');
 				break;
 			case 'account' :
-				$item -> setPriority('1000');
-				$item -> setText(elgg_view_icon('cog'));
+				$item->setPriority('1000');
+				$item->setText(elgg_view_icon('cog'));
 				break;
 			case 'profile' :
-				$icon = elgg_view('output/img', array('src' => $user -> getIconURL('tiny'), ));
-				$item -> setText("{$icon}<span>{$user->name}</span>");
+				$icon = elgg_view('output/img', array('src' => $user->getIconURL('tiny'),));
+				$item->setText("{$icon}<span>{$user->name}</span>");
 				break;
 			case 'site_notifications' :
-				$item -> setText(elgg_view_icon('flag'));
-				$item -> setParentName('');
+				$item->setText(elgg_view_icon('flag'));
+				$item->setParentName('');
 				break;
 		}
 	}
 
-	$menu[] = ElggMenuItem::factory(array('name' => 'search_icon', 'text' => elgg_view_icon('search') . elgg_view('search/header'), 'href' => false, 'section' => 'alt', 'priority' => 1, ));
+	$menu[] = ElggMenuItem::factory(array('name' => 'search_icon', 'text' => elgg_view_icon('search') . elgg_view('search/header'), 'href' => false, 'section' => 'alt', 'priority' => 1,));
 
-	$menu[] = ElggMenuItem::factory(array('name' => 'site_menu_toggle', 'text' => elgg_view_icon('bars'), 'href' => '', 'priority' => 1, ));
+	$menu[] = ElggMenuItem::factory(array(
+				'name' => 'site_menu_toggle',
+				'text' => elgg_view_icon('bars') . elgg_view_icon('times'),
+				'href' => '', 'priority' => 1,
+				'item_class' => 'sbw-off-canvas-toggle',
+	));
 
-	$menu[] = ElggMenuItem::factory(array('name' => 'dashboard', 'text' => elgg_view_icon('home'), 'href' => '/dashboard', 'section' => 'alt', ));
+	$menu[] = ElggMenuItem::factory(array('name' => 'dashboard', 'text' => elgg_view_icon('home'), 'href' => '/dashboard', 'section' => 'alt',));
 
+	if (!elgg_is_logged_in()) {
+		$menu[] = ElggMenuItem::factory([
+					'name' => 'language_selector',
+					'text' => elgg_view('language_selector/dropdown'),
+					'section' => 'alt',
+					'priority' => 100,
+		]);
+	}
 	return $menu;
+}
+
+function theme_sbw_site_menu($hook, $type, $return, $params) {
+	if (!elgg_is_logged_in()) {
+		$return[] = ElggMenuItem::factory([
+					'name' => 'login',
+					'href' => 'login',
+					'text' => elgg_echo('login'),
+		]);
+		$return[] = ElggMenuItem::factory([
+					'name' => 'register',
+					'href' => 'register',
+					'text' => elgg_echo('register'),
+		]);
+	}
+	return $return;
 }
 
 /**

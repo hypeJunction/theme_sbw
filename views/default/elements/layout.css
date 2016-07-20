@@ -6,24 +6,19 @@
  * Default layout: 990px wide, centered. Used in default page shell
  */
 
+body {
+	overflow: hidden;
+}
+
 /* ***************************************
 	PAGE LAYOUT
 *************************************** */
 /***** DEFAULT LAYOUT ******/
 /* the width is on the page rather than topbar to handle small viewports */
-.elgg-page-default {
-	min-width: 800px;
-}
 .elgg-page-default .elgg-page-header > .elgg-inner {
 	max-width: 990px;
 	margin: 0 auto;
 	min-height: 65px;
-}
-.elgg-page-default .elgg-page-navbar > .elgg-inner {
-	position: fixed;
-	top: 45px;
-	margin: 0 auto;
-	z-index: 9;
 }
 .elgg-page-default .elgg-page-body > .elgg-inner {
 	max-width: 990px;
@@ -40,15 +35,40 @@
 .elgg-page-topbar {
 	background: #33b1d9;
 	padding: 0;
-	position: fixed;
+	position: absolute;
 	top: 0;
-	width: 100%;
 	z-index: 9000;
-
+	box-sizing: border-box;
+    left: 0;
+    right: 0;
 }
-
 .elgg-page-topbar .elgg-inner {
-	padding-top: 5px;
+	padding: 2px 5px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.elgg-page-topbar .elgg-inner .elgg-menu-topbar-default {
+	flex: 1 1 40%;
+	order: 1;
+}
+.elgg-page-topbar .elgg-inner .elgg-menu-topbar-alt {
+	flex: 1 1 40%;
+	order: 3;
+	margin-left: auto;
+	text-align: right;
+}
+.elgg-page-topbar .elgg-inner #site-logo {
+	display: block;
+	width: 100px;
+	margin: 0 auto;
+	flex: 1 0 100px;
+	order: 2;
+	text-align: center;
+}
+.elgg-page-topbar .elgg-inner #site-logo img {
+	max-width: 100%;
+	height: auto;
 }
 
 /***** PAGE MESSAGES ******/
@@ -75,15 +95,38 @@
 .elgg-page-header > .elgg-inner {
 	position: relative;
 }
-/***** PAGE NAVBAR ******/
-.elgg-page-navbar {
-	padding: 0;
-	position: relative;
-	background: #4787B8;
+/***** PAGE CANVAS ******/
+.elgg-page {
+	display: flex;
 }
-.elgg-page-navbar > .elgg-inner {
+.elgg-page-off-canvas {
+	flex: 0 0 0;
+	height: 100vh;
+	background: #33b1d9;
+	overflow: hidden;
 	position: relative;
-	height: 100%;
+	-webkit-animation-property: -webkit-width;
+	-webkit-animation-property: -webkit-height;
+	-webkit-transition-duration: 0.5s;
+	-moz-animation-property: -webkit-width;
+	-moz-animation-property: -webkit-height;
+	-moz-transition-duration: 0.5s;
+	-o-animation-property: -webkit-width;
+	-o-animation-property: -webkit-height;
+	-o-transition-duration: 0.5s;
+	z-index: 2;
+}
+.elgg-page-show-off-canvas .elgg-page-off-canvas {
+	flex: 0 0 240px;
+}
+.elgg-page-off-canvas .sbw-off-canvas-toggle {
+	display: none;
+}
+.elgg-page-on-canvas {
+	flex: 1 1 auto;
+	height: 100vh;
+	overflow: auto;
+	position: relative;
 }
 
 /***** PAGE BODY LAYOUT ******/
@@ -150,7 +193,22 @@
 }
 
 @media (max-width: 820px) {
-	.elgg-page-default .elgg-page-navbar > .elgg-inner {
-		top: 88px;
+	.elgg-page-show-off-canvas .elgg-page-off-canvas {
+		flex: 0 0 100%;
+		padding-top: 44px;
+	}
+	.elgg-page-off-canvas .sbw-off-canvas-toggle {
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin: 10px;
+	}
+	.elgg-page-off-canvas .sbw-off-canvas-toggle > .elgg-icon {
+		color: white;
+		font-size: 20px;
+	}
+	.elgg-page-off-canvas .sbw-off-canvas-toggle:hover > .elgg-icon {
+		color: #FAC455;
 	}
 }

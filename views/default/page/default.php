@@ -28,25 +28,27 @@ $body = <<<__BODY
 	</div>
 __BODY;
 
-$body .= elgg_view('page/elements/topbar_wrapper', $vars);
+$topbar .= elgg_view('page/elements/topbar_wrapper', $vars);
 
 $body .= <<<__BODY
-	<div class="elgg-page-navbar">
+	<div class="elgg-page-navbar elgg-page-off-canvas">
 		<div class="elgg-inner">
 			$navbar
 		</div>
 	</div>
-	<div class="elgg-page-body">
-		<div class="elgg-inner">
-			$content
+	<div class="elgg-page-on-canvas">
+		$topbar
+		<div class="elgg-page-body">
+			<div class="elgg-inner">
+				$content
+			</div>
+		</div>
+		<div class="elgg-page-footer">
+			<div class="elgg-inner">
+				$footer
+			</div>
 		</div>
 	</div>
-	<div class="elgg-page-footer">
-		<div class="elgg-inner">
-			$footer
-		</div>
-	</div>
-</div>
 __BODY;
 
 $body .= elgg_view('page/elements/foot');

@@ -9,17 +9,21 @@
 Search plugin
 ***********************************/
 .elgg-search-header {
-	display: block;
+	display: inline-block;
 	position: relative;
-	float: right;
 }
 .elgg-search-header .search-input,
 .elgg-search-header .search-input:focus {
-	background: #33b1d9;
+	background: transparent;
 	color: white;
 	border: 0;
 	border-radius: 0;
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	margin: 0;
+	font-size: 14px;
+	line-height: 20px;
+	vertical-align: middle;
+	padding: 3px 6px;
 }
 .elgg-search-header ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color: white;
@@ -36,7 +40,7 @@ Search plugin
    color: white;
 }
 .elgg-menu-item-search-icon .elgg-icon-search {
-	margin: 8px 3px 0 0;
+	margin-right: 3px;
 }
 
 .elgg-search input[type=text] {
