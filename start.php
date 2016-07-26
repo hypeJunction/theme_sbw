@@ -156,7 +156,7 @@ function theme_sbw_topbar_menu($hook, $type, $menu, $params) {
 
 	$menu[] = ElggMenuItem::factory(array(
 				'name' => 'site_menu_toggle',
-				'text' => elgg_view_icon('bars') . elgg_view_icon('times'),
+				'text' => elgg_view_icon('bars') . elgg_view_icon('chevron-left'),
 				'href' => '', 'priority' => 1,
 				'item_class' => 'sbw-off-canvas-toggle',
 	));

@@ -184,13 +184,13 @@
 .elgg-nav-collapse {
 	height: 100%;
 }
-.elgg-menu-topbar .sbw-off-canvas-toggle .elgg-icon-times {
+.elgg-menu-topbar .sbw-off-canvas-toggle .elgg-icon-chevron-left {
 	display: none;
 }
 .elgg-menu-topbar .sbw-off-canvas-toggle.elgg-state-active .elgg-icon-bars {
 	display: none;
 }
-.elgg-menu-topbar .sbw-off-canvas-toggle.elgg-state-active .elgg-icon-times {
+.elgg-menu-topbar .sbw-off-canvas-toggle.elgg-state-active .elgg-icon-chevron-left {
 	display: block;
 }
 @media (max-width: 820px) {
