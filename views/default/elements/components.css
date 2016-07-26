@@ -23,11 +23,11 @@
 	List
 *************************************** */
 .elgg-list {
-	margin: 5px 0;
 	clear: both;
 }
 .elgg-list > li {
-	border-bottom: 1px solid #DCDCDC;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 5px 10px;
 }
 .elgg-item h3 a {
 	padding-bottom: 4px;
@@ -169,37 +169,30 @@
 /* ***************************************
 	River
 *************************************** */
-.elgg-page-body .elgg-river-layout .elgg-main {
-	background: none;
-	border: none;
-	padding: 0;
-}
-.elgg-page-body .elgg-river-layout .elgg-main .elgg-head {
-	background: white;
-	border: 1px solid #DCDCDC;
-	border-bottom: none;
-	margin: 0;
-	padding: 0 10px;
-}
 .elgg-river-layout .wall-container {
-	background: white;
-	margin: 0 0 20px 0;
-	border: 1px solid #DCDCDC;
-	border-top: none;
-	padding: 20px 10px;
+	margin: 0 0 10px;
+	padding: 0 0 10px;
 }
 .elgg-river-layout .elgg-menu-filter {
 	margin: 0;
 }
 .elgg-river-layout .elgg-list-river {
-	border-top: none;
+    background: #f2f2f2;
+    padding: 15px;
+    margin: 0;
+    border-color: #dedede;
+    border-width: 1px 0;
+    border-style: solid;
 }
-.elgg-list-river > li {
+.elgg-river-layout .elgg-list-river > li {
 	background: white;
 	border: 1px solid #DCDCDC;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05);
 	margin: 0 0 15px 0;
 	padding: 10px;
+}
+.elgg-river-layout .elgg-list-river > .elgg-item > .elgg-image-block {
+    padding: 0;
 }
 .elgg-river-item .elgg-pict {
 	margin-right: 20px;

@@ -26,3 +26,6 @@ body {
     color: #666;
     font-size: 13px;
 }
+.elgg-form-blog-save div {
+	width: auto !important;
+}

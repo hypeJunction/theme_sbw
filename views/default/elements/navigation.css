@@ -271,10 +271,6 @@
 /* ***************************************
 	TITLE
 *************************************** */
-.elgg-menu-title {
-	float: right;
-	margin-top: -1px;
-}
 .elgg-menu-title > li {
 	display: inline-block;
 	margin-left: 4px;
@@ -284,7 +280,7 @@
 	FILTER MENU
 *************************************** */
 .elgg-menu-filter {
-	margin-bottom: 5px;
+	margin: 10px 0 5px;
 	border-bottom: 1px solid #DCDCDC;
 	display: table;
 	width: 100%;
