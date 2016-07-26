@@ -171,6 +171,10 @@ body * {
 .elgg-sidebar > .elgg-inner > .elgg-module:last-child {
     margin-bottom: 0;
 }
+.elgg-layout-breadcrumbs {
+	padding: 10px;
+}
+
 .elgg-sidebar > .elgg-inner {
     padding: 15px;
 }

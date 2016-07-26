@@ -30,8 +30,13 @@ if (empty($sidebar)) {
 $nav = elgg_extract('nav', $vars, elgg_view('navigation/breadcrumbs'));
 $header = elgg_view('page/layouts/elements/header', $vars);
 $footer = elgg_view('page/layouts/elements/footer', $vars);
-?>
 
+if ($nav) {
+	?>
+	<div class="elgg-layout-breadcrumbs"><?= $nav ?></div>
+	<?php
+}
+?>
 <div class="<?= implode(' ', $class); ?>">
 	<?php
 	if (!empty($sidebar)) {
