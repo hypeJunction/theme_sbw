@@ -1,2 +1,6 @@
 .*
 !.gitignore
+/sass/
+config.rb
+Gemfile
+Gemfile.lock

@@ -29,3 +29,41 @@ body {
 .elgg-form-blog-save div {
 	width: auto !important;
 }
+
+.select.mls {
+	margin: 0;
+}
+ul.tagit input[type="text"] {
+    height: auto;
+}
+ul.tagit {
+    border-radius: 0;
+    border-color: #dedede;
+    padding: 4px 8px;
+}
+
+.event-manager-forms-label-inline select, .event-manager-forms-label-inline input {
+    display: inline-block;
+    width: auto;
+}
+
+.event-manager-forms-label-inline label {
+    line-height: 41px;
+    min-width: 60px;
+}
+
+
+#new-choices-area > div {
+    position: relative;
+}
+
+#new-choices-area > div .delete-choice {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 11px;
+}
+
+#new-choices-area {
+    margin-bottom: 10px;
+}

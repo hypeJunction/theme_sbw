@@ -60,12 +60,12 @@
 
 /* Featured */
 .elgg-module-featured {
-	border: 1px solid #4690D6;
+	border: 1px solid #33b1d9;
 	border-radius: 6px;
 }
 .elgg-module-featured > .elgg-head {
 	padding: 5px;
-	background-color: #4690D6;
+	background-color: #33b1d9;
 }
 .elgg-module-featured > .elgg-head * {
 	color: white;

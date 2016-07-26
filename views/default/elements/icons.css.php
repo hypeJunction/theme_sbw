@@ -22,7 +22,7 @@
 :focus > .elgg-icon,
 .elgg-icon:hover,
 .elgg-icon-hover {
-	color: #4690D6;
+	color: #33b1d9;
 }
 
 h1 > .elgg-icon,

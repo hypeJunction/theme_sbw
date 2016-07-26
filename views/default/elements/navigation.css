@@ -484,6 +484,9 @@
 *************************************** */
 .elgg-menu-longtext {
 	float: right;
+	margin-top: -28px;
+    padding: 5px;
+    font-size: 12px;
 }
 
 /* ***************************************
