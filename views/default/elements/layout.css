@@ -185,6 +185,8 @@ body * {
 .elgg-layout-header > .elgg-head {
     display: flex;
     flex-wrap: wrap;
+	align-items: center;
+    line-height: 20px;
 }
 
 .elgg-layout-header > .elgg-head > h2 {

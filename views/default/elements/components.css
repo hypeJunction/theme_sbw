@@ -29,6 +29,9 @@
     border-bottom: 1px solid #f1f1f1;
     padding: 5px 10px;
 }
+.elgg-widget .elgg-list > li:last-child {
+	border-bottom: none;
+}
 .elgg-item h3 a {
 	padding-bottom: 4px;
 }
@@ -257,12 +260,6 @@
     border-width: 0 1px 1px 1px;
 	padding: 6px;
 	height: auto;
-}
-.elgg-river-item input[type=text] {
-	width: 78%;
-}
-.elgg-river-item input[type=submit] {
-	margin: 0 0 0 10px;
 }
 
 /* **************************************
