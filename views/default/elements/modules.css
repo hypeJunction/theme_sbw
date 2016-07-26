@@ -8,23 +8,21 @@
 	margin-bottom: 20px;
 }
 
-/* Aside */
-.elgg-module-aside .elgg-head {
-	border-bottom: 1px solid #CCC;
-
-	margin-bottom: 5px;
-	padding-bottom: 5px;
-}
-
-/* Info */
+.elgg-module-aside > .elgg-head,
 .elgg-module-info > .elgg-head {
-	background: #e4e4e4;
+	border-bottom: 1px solid #f1f1f1;
+	margin-bottom: 5px;
 	padding: 5px;
-	margin-bottom: 10px;
-	border-radius: 3px;
 }
-.elgg-module-info > .elgg-head * {
-	color: #333;
+
+.elgg-module-info > .elgg-head *,
+.elgg-module-aside > .elgg-head * {
+	color: #666;
+}
+
+.elgg-module-aside > .elgg-body,
+.elgg-module-info > .elgg-body {
+	padding: 5px;
 }
 
 /* Popup */

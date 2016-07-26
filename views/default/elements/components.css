@@ -36,7 +36,7 @@
     border-bottom: 1px solid #f1f1f1;
     padding: 5px 10px;
 }
-.elgg-widget .elgg-list > li:last-child {
+.elgg-module > .elgg-body > .elgg-list > li:last-child {
 	border-bottom: none;
 }
 .elgg-item h3 a {
@@ -150,10 +150,12 @@
 	border-radius: 5px;
 }
 .elgg-box {
-	margin: 10px 0;
 	padding: 20px;
 	border-radius: 5px;
 	box-sizing: border-box;
+}
+.elgg-box + .elgg-box {
+	margin: 10px 0 0;
 }
 .elgg-box.elgg-state-error {
 	color: #B94A48;
@@ -161,9 +163,10 @@
 	border: 1px solid #E5B7B5;
 }
 .elgg-box.elgg-state-notice {
-	color: #3B8BC9;
-	background-color: #E7F1F9;
-	border: 1px solid #B1D1E9;
+    color: #666;
+    background-color: rgba(51, 177, 217, 0.16);
+    border: 1px solid #33b1d9;
+    border-radius: 0;
 }
 .elgg-box.elgg-state-success {
 	color: #397F2E;
@@ -273,20 +276,20 @@
 	Comments (from elgg_view_comments)
 ************************************** */
 .elgg-comments {
-	margin-top: 25px;
+	
 }
-.elgg-comments .elgg-list {
+.elgg-comments > .elgg-list {
 	position: relative;
-    border-top: 1px solid #DCDCDC;
+    border-top: 1px solid #f1f1f1;
 }
-.elgg-comments .elgg-list > li {
-    border-color: #DCDCDC;
+.elgg-comments > .elgg-list > li {
+    border-color: #f1f1f1;
     border-style: solid;
     border-width: 0 1px 1px 1px;
-	padding: 4px 10px;
+	padding: 10px;
 }
 .elgg-comments > form {
-	margin-top: 15px;
+	
 }
 
 /* Comment highlighting that automatically fades away */
@@ -309,8 +312,8 @@
 /* **************************************
 	Comments triangle
 ************************************** */
-.elgg-comments .elgg-list:after,
-.elgg-comments .elgg-list:before,
+.elgg-comments > .elgg-list:after,
+.elgg-comments > .elgg-list:before,
 .elgg-river-comments:after,
 .elgg-river-comments:before {
 	bottom: 100%;
@@ -322,17 +325,17 @@
 	position: absolute;
 	pointer-events: none;
 }
-.elgg-comments .elgg-list:after,
+.elgg-comments > .elgg-list:after,
 .elgg-river-comments:after {
-	border-color: rgba(238, 238, 238, 0);
+	border-color: transparent;
 	border-bottom-color: #FFF;
 	border-width: 8px;
 	margin-left: -8px;
 }
-.elgg-comments .elgg-list:before,
+.elgg-comments > .elgg-list:before,
 .elgg-river-comments:before {
-	border-color: rgba(220, 220, 220, 0);
-	border-bottom-color: #DCDCDC;
+	border-color: transparent;
+	border-bottom-color: #f1f1f1;
 	border-width: 9px;
 	margin-left: -9px;
 }
