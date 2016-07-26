@@ -180,11 +180,13 @@ function theme_sbw_site_menu($hook, $type, $return, $params) {
 					'name' => 'login',
 					'href' => 'login',
 					'text' => elgg_echo('login'),
+					'priority' => 1,
 		]);
 		$return[] = ElggMenuItem::factory([
 					'name' => 'register',
 					'href' => 'register',
 					'text' => elgg_echo('register'),
+					'priority' => 2,
 		]);
 	}
 	return $return;
